@@ -11,17 +11,17 @@ function ProductDetail() {
     const {productId}=useParams();
     const dispatch=useDispatch();
     console.log(product,"Single");
-    const fetchProduct=async()=>{
+    // const fetchProduct=async()=>{
         
-      const {data}=await axios.get(`https://fakestoreapi.com/products/${productId}`).catch(err=>console.log(err))
-    //   console.log(resp,"daaaaa");
-    dispatch(selectedProduct(data))
+    //   const {data}=await axios.get(`https://fakestoreapi.com/products/${productId}`).catch(err=>console.log(err))
+    // //   console.log(resp,"daaaaa");
+    // dispatch(selectedProduct(data))
 
 
 
-    }
+    // }
     useEffect(() => {
-        if(productId && productId!=="")fetchProduct()
+        if(productId && productId!=="") dispatch(selectedProduct(productId))
         return ()=>{
             dispatch(removeSelectedProduct())
         }

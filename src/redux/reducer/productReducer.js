@@ -8,7 +8,9 @@ switch (type) {
     case ActionTypes.SET_PRODUCTS:
         return {...state,products:payload};
         break;
-         
+        case ActionTypes.FETCH_PRODUCTS:
+            return {...state,products:payload};
+            break;     
 
     default:
         return state;
