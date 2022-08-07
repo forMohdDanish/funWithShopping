@@ -1,13 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import {useEffect, useState} from 'react'
+import React from "react";
+import "./App.css";
 
 function App() {
-  
-  
   return (
-    <h1>Hello</h1>
-
+    <div>
+      Hello
+    </div>
   );
 }
 
